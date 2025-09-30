@@ -1,0 +1,71 @@
+# --------------------
+# Python
+# --------------------
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+.eggs/
+*.pyo
+*.pyd
+*.pdb
+
+# Byte-compiled / optimized / DLL files
+*.dll
+*.dylib
+*.exe
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+.ipynb_checkpoints/
+
+# --------------------
+# Jupyter
+# --------------------
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+.jupyter/
+.jupyter_cache/
+
+# Jupyter Lab specific
+.lab/
+*.jl
+*.ipynb_run
+
+# --------------------
+# Data / Logs / Outputs
+# --------------------
+*.csv
+*.tsv
+*.log
+*.out
+*.dat
+*.db
+*.sqlite
+*.h5
+*.parquet
+*.feather
+*.joblib
+*.pkl
+
+# Large notebook outputs (optional)
+*.nbconvert.ipynb
+
+# --------------------
+# OS files
+# --------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --------------------
+# VSCode / Editors
+# --------------------
+.vscode/
+.idea/
+*.swp
