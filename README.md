@@ -57,9 +57,9 @@ Each notebook will:
 
 ## Per-case notes
 
-* **case1_ecommerce_sales** — orders by date/product/country, monthly revenue, category mix, distribution checks.
-* **case2_saas_churn** — plan mix, churned vs active, ARPU, simple retention curves, distributions.
-* **case3_marketing_perf** — spend/clicks/conversions/revenue, ROAS/CVR, time-series spend, revenue vs spend.
+* **case1_ecommerce_sales** — Ecommerce sales data, 10 charts, a Jupyter Notebook
+* **case2_saas_churn** — SaaS sales and churt data, 10 charts, a Jupyter Notebook
+* **case3_marketing_perf** — Marketing performance data, 5 charts, a Jupyter Notebook
 
 *(Column names vary by dataset; tweak early cells to map your columns.)*
 
