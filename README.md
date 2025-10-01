@@ -1,34 +1,85 @@
-# Simple Data Processing — 3 Notebook Samples
+# SimpleDataProcessing
 
-Fast, standardized **data cleaning + 5 to 10-chart EDA** workflows in Jupyter notebooks.  
-These samples showcase how messy CSV/Excel data is turned into decision-ready outputs with **transparent, reproducible code**.
+Three self-contained Jupyter Notebooks that **clean messy CSV/Excel files and produce 5 clear charts** per case. Each notebook saves a cleaned dataset, chart images (PNGs), and keeps the steps reproducible in code.
 
-## What’s inside
+---
 
-**Three focused cases** (each is self-contained):
+## What’s inside (short)
 
-1. **E-commerce Sales** — cleaning orders data; monthly revenue, top countries/categories, distribution checks.
-2. **SaaS Users & Churn** — cleaning user table; plan mix, churn flag, ARPU, simple retention curves.
-3. **Marketing Performance** — cleaning ad spend logs; spend by channel, ROAS/CVR views, 60-day series.
+```
+SimpleDataProcessing/
+├─ case1_ecommerce_sales/      # notebook + charts + sample raw/clean CSV
+├─ case2_saas_churn/           # notebook + charts + sample raw/clean CSV
+├─ case3_marketing_perf/       # notebook + charts + sample raw/clean CSV
+└─ .gitignore
+```
 
-> Each case folder contains a Jupyter notebook and supporting data/artifacts (e.g., charts).  
-> Folders present: `case1_ecommerce_sales/`, `case2_saas_churn/`, `case3_marketing_perf/`.
+---
 
-## Why this repo
+## Quick start
 
-- **Productized service demo**: A tight, repeatable scope clients understand (clean dataset + 5 charts + notebook).
-- **Reproducibility**: Every step is visible in the notebook; clients can rerun or extend it.
-- **Speed**: Guardrails keep delivery predictable (single file, column/row limits, basic EDA).
+### 1) Clone and open
 
-## Quickstart
+```bash
+git clone https://github.com/STProgrammer/SimpleDataProcessing.git
+cd SimpleDataProcessing
+```
 
-1. **Environment**
-   - Python 3.10+
-   - `pip install jupyterlab pandas numpy matplotlib`
+Open in JupyterLab or classic Jupyter Notebook (VS Code works too).
 
-   *(Optional)* If you prefer conda:
+### 2) Install minimal dependencies
 
-   ```bash
-   conda create -n sdp python=3.11 -y
-   conda activate sdp
-   pip install jupyterlab pandas numpy matplotlib
+```bash
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# macOS/Linux:
+source .venv/bin/activate
+
+pip install --upgrade pip
+pip install jupyter pandas numpy matplotlib
+# optional: pip install seaborn
+```
+
+### 3) Run any notebook
+
+* Open `case*/notebook.ipynb`.
+* Adjust the **input file path** (CSV/XLSX) in the first cell if needed.
+* Run cells top-to-bottom.
+
+Each notebook will:
+
+* load the raw file
+* standardize text/casing, parse dates, fix types, remove duplicates, handle nulls
+* produce **5 charts** (saved under `charts/`)
+* export a **cleaned dataset** (`*clean.csv`)
+
+---
+
+## Per-case notes
+
+* **case1_ecommerce_sales** — orders by date/product/country, monthly revenue, category mix, distribution checks.
+* **case2_saas_churn** — plan mix, churned vs active, ARPU, simple retention curves, distributions.
+* **case3_marketing_perf** — spend/clicks/conversions/revenue, ROAS/CVR, time-series spend, revenue vs spend.
+
+*(Column names vary by dataset; tweak early cells to map your columns.)*
+
+---
+
+## Outputs
+
+* `charts/1_*.png` … `charts/5_*.png` (publication-ready)
+* `*clean.csv` (cleaned dataset)
+* Executed `notebook.ipynb` documenting every step
+
+---
+
+## Environment
+
+* Python 3.10+ recommended
+* Packages: `jupyter`, `pandas`, `numpy`, `matplotlib` (optional: `seaborn`)
+
+---
+
+## License
+
+Add a `LICENSE` file (e.g., MIT/BSD/Apache) if you plan to reuse.
