@@ -42,7 +42,7 @@ pip install jupyter pandas numpy matplotlib
 
 ### 3) Run any notebook
 
-* Open `case*/notebook.ipynb`.
+* Open `case*/*_template.ipynb`.
 * Adjust the **input file path** (CSV/XLSX) in the first cell if needed.
 * Run cells top-to-bottom.
 
